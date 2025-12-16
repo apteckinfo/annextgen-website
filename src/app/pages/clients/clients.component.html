@@ -1,0 +1,315 @@
+<!-- Enhanced Page Header -->
+<section class="page-header">
+  <div class="header-particles"></div>
+  <div class="container">
+    <div class="header-content">
+      <div class="badge" data-aos="fade-down">
+        <span class="badge-icon">🤝</span>
+        <span>Building Long-Term Partnerships</span>
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Our Clients</h1>
+      <p class="tagline" data-aos="fade-up" data-aos-delay="200">
+        Trusted by leading manufacturing companies across India - Delivering cutting-edge automation, machine vision, and AI-based inspection solutions
+      </p>
+      
+      <!-- Client Stats -->
+      <div class="header-stats" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Industries Served</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">99%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-wave">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Clients Overview -->
+<section class="clients-overview">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">OUR PARTNERS</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">Trusted by <span class="gradient-text">Industry Leaders</span></h2>
+      <p class="section-subtitle">Serving leading companies across Automobile, Pharmaceutical, Medical Devices, Electronics, and General Manufacturing sectors</p>
+    </div>
+  </div>
+</section>
+
+<!-- Clients Grid Section -->
+<section class="clients-grid-section">
+  <div class="container">
+    <div class="clients-grid">
+      <div class="client-card" 
+           *ngFor="let client of clients; let i = index"
+           data-aos="zoom-in"
+           [attr.data-aos-delay]="i * 50">
+        <div class="card-glow"></div>
+        <div class="client-logo-wrapper">
+          <div class="logo-circle">
+            <!-- Use image if logo path exists, otherwise fallback to emoji -->
+            <img *ngIf="client.logoPath" 
+                 [src]="client.logoPath" 
+                 [alt]="client.name"
+                 class="client-logo-img">
+            <span *ngIf="!client.logoPath" class="client-logo-emoji">{{ client.logo }}</span>
+          </div>
+        </div>
+        <h4 class="client-name">{{ client.name }}</h4>
+        <p class="industry-tag">
+          <span class="tag-dot"></span>
+          {{ client.industry }}
+        </p>
+        <div class="client-meta">
+          <span class="meta-item">
+            <span class="meta-icon">📍</span>
+            {{ client.location }}
+          </span>
+          <span class="meta-item" *ngIf="client.since">
+            <span class="meta-icon">📅</span>
+            Since {{ client.since }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Metrics Section -->
+<section class="key-metrics">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">PROVEN RESULTS</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">Delivering <span class="gradient-text">Measurable Impact</span></h2>
+    </div>
+    
+    <div class="metrics-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="metric-card">
+        <div class="metric-icon">📈</div>
+        <div class="metric-value">45%</div>
+        <div class="metric-label">Average Efficiency Increase</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-icon">💰</div>
+        <div class="metric-value">₹50Cr+</div>
+        <div class="metric-label">Total Client Savings</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-value">70%</div>
+        <div class="metric-label">Downtime Reduction</div>
+      </div>
+      
+      <div class="metric-card">
+        <div class="metric-icon">✅</div>
+        <div class="metric-value">99.9%</div>
+        <div class="metric-label">Quality Accuracy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">CLIENT FEEDBACK</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">What Our <span class="gradient-text">Clients Say</span></h2>
+      <p class="section-subtitle">Real experiences from our valued partners</p>
+    </div>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card" 
+           *ngFor="let testimonial of testimonials; let i = index"
+           data-aos="fade-up"
+           [attr.data-aos-delay]="i * 100">
+        <div class="testimonial-header">
+          <div class="quote-icon">"</div>
+          <div class="rating">
+            <span class="star" *ngFor="let star of [1,2,3,4,5]">⭐</span>
+          </div>
+        </div>
+        <p class="testimonial-text">{{ testimonial.text }}</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <span>{{ testimonial.name.charAt(0) }}</span>
+          </div>
+          <div class="author-info">
+            <strong class="author-name">{{ testimonial.name }}</strong>
+            <span class="author-position">{{ testimonial.position }}</span>
+            <span class="author-company">{{ testimonial.company }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Stories / Case Studies -->
+<!-- <section class="case-studies">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">SUCCESS STORIES</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">Client <span class="gradient-text">Success Stories</span></h2>
+      <p class="section-subtitle">Real challenges, innovative solutions, measurable results</p>
+    </div>
+    
+    <div class="case-studies-grid">
+      <div class="case-study-card" 
+           *ngFor="let study of caseStudies; let i = index"
+           data-aos="flip-left"
+           [attr.data-aos-delay]="i * 100">
+        <div class="case-study-header">
+          <div class="case-icon">{{ study.icon }}</div>
+          <div class="case-title-wrapper">
+            <h3 class="case-client">{{ study.client }}</h3>
+            <p class="case-industry">{{ study.industry }}</p>
+          </div>
+        </div>
+        
+        <div class="case-content">
+          <div class="case-section challenge">
+            <h4>
+              <span class="section-icon">🎯</span>
+              Challenge
+            </h4>
+            <p>{{ study.challenge }}</p>
+          </div>
+          
+          <div class="case-section solution">
+            <h4>
+              <span class="section-icon">💡</span>
+              Solution
+            </h4>
+            <p>{{ study.solution }}</p>
+          </div>
+          
+          <div class="case-section results">
+            <h4>
+              <span class="section-icon">📊</span>
+              Results
+            </h4>
+            <ul class="results-list">
+              <li *ngFor="let result of study.results">
+                <span class="result-icon">✓</span>
+                <span>{{ result }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="case-footer">
+          <a routerLink="/contact" class="case-link">
+            <span>Discuss Your Project</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Trust Indicators -->
+<section class="trust-indicators">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title centered">Why Clients <span class="gradient-text">Choose Us</span></h2>
+    </div>
+    
+    <div class="trust-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="trust-card">
+        <div class="trust-icon">🎓</div>
+        <h4>10+ Years Experience</h4>
+        <p>Extensive expertise in SPM development, AI-based vision, and industrial automation</p>
+      </div>
+      
+      <div class="trust-card">
+        <div class="trust-icon">🏆</div>
+        <h4>Strong Leadership</h4>
+        <p>Led by experienced Directors with deep technical and business expertise</p>
+      </div>
+      
+      <div class="trust-card">
+        <div class="trust-icon">📍</div>
+        <h4>Strategic Location</h4>
+        <p>Based in IMT Manesar - heart of India's automotive and industrial hub</p>
+      </div>
+      
+      <div class="trust-card">
+        <div class="trust-icon">🔧</div>
+        <h4>Custom Engineering</h4>
+        <p>Tailored SPM, vision systems, and automation solutions for your needs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enhanced CTA Section -->
+<section class="cta-section">
+  <div class="cta-background"></div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in">
+      <div class="cta-badge">
+        <span class="pulse-dot"></span>
+        <span>Partner With Us</span>
+      </div>
+      <h2>Ready to Transform Your Operations?</h2>
+      <p>Join leading companies who trust AN NextGen Innovations for their automation and vision inspection needs</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-primary btn-large">
+          <span>Get Started Today</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a routerLink="/solutions" class="btn btn-secondary btn-large">
+          <span>Explore Solutions</span>
+        </a>
+      </div>
+      
+      <div class="cta-features">
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>Free Consultation</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>Custom Proposal</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>No Obligation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

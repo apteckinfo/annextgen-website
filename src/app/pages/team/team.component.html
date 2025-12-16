@@ -1,0 +1,132 @@
+<section class="page-header">
+  <div class="header-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+  </div>
+  <div class="container">
+    <div class="header-badge" data-aos="fade-down">
+      <span class="badge-icon">👥</span>
+      <span>Meet Our Team</span>
+    </div>
+    <h1 data-aos="fade-up">Our Team</h1>
+    <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">
+      Meet the experts driving innovation in industrial automation, machine vision, and AI-based inspection solutions
+    </p>
+  </div>
+</section>
+
+<section class="leadership-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-aos="fade-up">Leadership</div>
+      <h2 data-aos="fade-up" data-aos-delay="100">
+        Our <span class="gradient-text">Directors</span>
+      </h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+        Dynamic leadership with over 10 years of extensive experience in engineering, business administration, and technical project leadership
+      </p>
+    </div>
+    
+    <div class="leadership-grid">
+      <div class="team-card" *ngFor="let member of leadership; let i = index"
+           data-aos="zoom-in"
+           [attr.data-aos-delay]="i * 150">
+        <div class="card-decoration"></div>
+        <div class="team-avatar">
+          <div class="avatar-ring"></div>
+          <span class="avatar-placeholder">{{ member.name.split(' ')[1].charAt(0) }}</span>
+        </div>
+        <div class="team-info">
+          <h3>{{ member.name }}</h3>
+          <p class="team-position">{{ member.position }}</p>
+          <p class="team-bio">{{ member.bio }}</p>
+          
+          <div class="team-expertise">
+            <h4 class="expertise-title">Core Expertise</h4>
+            <div class="expertise-tags">
+              <span class="expertise-tag" *ngFor="let skill of member.expertise">
+                <span class="tag-icon">✓</span>
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+          
+          <div class="team-contact">
+            <a [href]="'mailto:' + member.email" class="contact-link" title="Email">
+              <span class="icon">📧</span>
+            </a>
+            <a [href]="member.linkedin" class="contact-link" title="LinkedIn" target="_blank">
+              <span class="icon">in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team-strength">
+  <div class="container">
+    <div class="strength-content" data-aos="fade-up">
+      <div class="strength-icon">💪</div>
+      <h3>Our Strength: Our People</h3>
+      <p>
+        The company is powered by a team of highly qualified engineers, skilled technicians, 
+        software developers, and commercial experts who collaborate seamlessly to deliver 
+        world-class engineering outcomes. With global exposure and cross-industry experience, 
+        our team ensures innovation, precision, and quality in every project.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="departments-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge" data-aos="fade-up">Our Expertise</div>
+      <h2 data-aos="fade-up" data-aos-delay="100">
+        Specialized <span class="gradient-text">Departments</span>
+      </h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+        Expert teams working together to deliver cutting-edge engineering solutions
+      </p>
+    </div>
+    
+    <div class="departments-grid">
+      <div class="department-card" *ngFor="let dept of departments; let i = index"
+           data-aos="fade-up"
+           [attr.data-aos-delay]="i * 100">
+        <div class="dept-icon-wrapper">
+          <div class="dept-icon">{{ dept.icon }}</div>
+        </div>
+        <h4>{{ dept.name }}</h4>
+        <p>{{ dept.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="join-team">
+  <div class="cta-background">
+    <div class="cta-pattern"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in">
+      <div class="cta-badge">
+        <span class="pulse-dot"></span>
+        <span>Join Us</span>
+      </div>
+      <h2>Become Part of Our Team</h2>
+      <p>We're always looking for talented individuals passionate about industrial innovation, automation, and engineering excellence</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-white btn-large">
+          <span>View Open Positions</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a routerLink="/contact" class="btn btn-outline-white btn-large">
+          <span>Send Your CV</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,230 @@
+<!-- Enhanced Page Header -->
+<section class="page-header">
+  <div class="header-particles"></div>
+  <div class="container">
+    <div class="header-content">
+      <div class="badge" data-aos="fade-down">
+        <span class="badge-icon">🏭</span>
+        <span>Trusted by Industry Leaders</span>
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Industries We Serve</h1>
+      <p class="tagline" data-aos="fade-up" data-aos-delay="200">
+        Specialized automation solutions tailored for diverse manufacturing sectors
+      </p>
+    </div>
+  </div>
+  <div class="header-wave">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Industries Overview -->
+<section class="industries-overview">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">OUR EXPERTISE</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">Delivering Excellence Across <span class="gradient-text">Multiple Industries</span></h2>
+      <p class="section-subtitle">From automotive to pharmaceuticals, we provide cutting-edge automation solutions customized for your industry's unique challenges</p>
+    </div>
+  </div>
+</section>
+
+<!-- Industries Grid Section -->
+<section class="industries-section">
+  <div class="container">
+    <div class="industries-grid">
+      <div class="industry-card" 
+           *ngFor="let industry of industries; let i = index"
+           data-aos="fade-up"
+           [attr.data-aos-delay]="i * 100">
+        
+        <!-- Card Background Gradient -->
+        <div class="card-gradient"></div>
+        
+        <!-- Industry Number -->
+        <div class="industry-number">{{ (i + 1).toString().padStart(2, '0') }}</div>
+        
+        <!-- Industry Icon -->
+        <div class="industry-icon-wrapper">
+          <div class="icon-circle">
+            <span class="industry-icon-large">{{ industry.icon }}</span>
+          </div>
+        </div>
+        
+        <!-- Industry Content -->
+        <div class="industry-content">
+          <h2 class="industry-name">{{ industry.name }}</h2>
+          <p class="industry-description">{{ industry.description }}</p>
+          
+          <!-- Key Applications -->
+          <div class="applications-section">
+            <h4 class="applications-title">
+              <span class="title-icon">⚡</span>
+              Key Applications
+            </h4>
+            <ul class="applications-list">
+              <li *ngFor="let app of industry.applications">
+                <span class="checkmark">✓</span>
+                <span>{{ app }}</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Industry Stats (if available) -->
+          <div class="industry-stats" *ngIf="industry.stats">
+            <div class="stat-item">
+              <span class="stat-value">{{ industry.stats.clients }}</span>
+              <span class="stat-label">Clients Served</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">{{ industry.stats.projects }}</span>
+              <span class="stat-label">Projects</span>
+            </div>
+          </div>
+          
+          <!-- Action Button -->
+          <div class="industry-actions">
+            <a routerLink="/contact" class="btn btn-primary">
+              <span>Request Consultation</span>
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us for Your Industry -->
+<section class="industry-benefits">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">OUR ADVANTAGE</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">Why Industry Leaders <span class="gradient-text">Trust Us</span></h2>
+    </div>
+    
+    <div class="benefits-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <h4>Industry-Specific Expertise</h4>
+        <p>Deep understanding of sector-specific requirements and compliance standards</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🔧</div>
+        <h4>Custom Engineering</h4>
+        <p>Tailored solutions designed for your unique operational challenges</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">✅</div>
+        <h4>Compliance Ready</h4>
+        <p>Solutions that meet industry regulations and quality standards</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h4>Rapid Implementation</h4>
+        <p>Fast deployment with minimal disruption to your operations</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">💼</div>
+        <h4>Proven Track Record</h4>
+        <p>50+ successful implementations across multiple sectors</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🛡️</div>
+        <h4>Ongoing Support</h4>
+        <p>24/7 technical support and continuous improvement programs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case Studies Preview (Optional) -->
+<section class="case-studies-preview">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title centered">Success Stories from <span class="gradient-text">Our Clients</span></h2>
+      <p class="section-subtitle">Real results from real implementations</p>
+    </div>
+    
+    <div class="case-studies-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="case-study-item">
+        <div class="case-study-icon">🚗</div>
+        <h4>Automotive Leader</h4>
+        <p class="case-study-result">45% increase in production efficiency</p>
+      </div>
+      
+      <div class="case-study-item">
+        <div class="case-study-icon">💊</div>
+        <h4>Pharmaceutical Giant</h4>
+        <p class="case-study-result">99.9% quality compliance achieved</p>
+      </div>
+      
+      <div class="case-study-item">
+        <div class="case-study-icon">💻</div>
+        <h4>Electronics Manufacturer</h4>
+        <p class="case-study-result">60% reduction in defect rates</p>
+      </div>
+      
+      <!-- <div class="case-study-item">
+        <div class="case-study-icon">🍽️</div>
+        <h4>Food & Beverage Producer</h4>
+        <p class="case-study-result">Zero contamination incidents</p>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- Enhanced CTA Section -->
+<section class="cta-section">
+  <div class="cta-background"></div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in">
+      <div class="cta-badge">
+        <span class="pulse-dot"></span>
+        <span>Let's Partner Together</span>
+      </div>
+      <h2>Ready to Transform Your Industry Operations?</h2>
+      <p>Connect with our industry experts to discuss how we can optimize your manufacturing processes</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-primary btn-large">
+          <span>Schedule Consultation</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a routerLink="/solutions" class="btn btn-secondary btn-large">
+          <span>Explore Solutions</span>
+        </a>
+      </div>
+      
+      <div class="cta-features">
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>Free Industry Assessment</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>Custom ROI Analysis</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>Expert Consultation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

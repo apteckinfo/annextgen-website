@@ -1,0 +1,28 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <nav class="navbar container">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="assets/images/logo.png" alt="AN NextGen Innovations Logo" class="logo-image">
+        <span class="logo-text">AN NextGen Innovations</span>
+      </a>
+    </div>
+    
+    <button class="mobile-toggle" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-menu" [class.active]="isMobileMenuOpen">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">About</a></li>
+      <li><a routerLink="/solutions" routerLinkActive="active" (click)="closeMobileMenu()">Solutions</a></li>
+      <li><a routerLink="/industries" routerLinkActive="active" (click)="closeMobileMenu()">Industries</a></li>
+      <li><a routerLink="/clients" routerLinkActive="active" (click)="closeMobileMenu()">Clients</a></li>
+      <li><a routerLink="/team" routerLinkActive="active" (click)="closeMobileMenu()">Team</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a></li>
+    </ul>
+    
+    <a routerLink="/contact" class="btn btn-primary nav-cta">Get Started</a>
+  </nav>
+</header>

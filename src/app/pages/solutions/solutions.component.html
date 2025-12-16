@@ -1,0 +1,250 @@
+<!-- Enhanced Page Header -->
+<section class="page-header">
+  <div class="header-particles"></div>
+  <div class="container">
+    <div class="header-content">
+      <div class="badge" data-aos="fade-down">
+        <span class="badge-icon">⚡</span>
+        <span>Cutting-Edge Technology Solutions</span>
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Our Solutions</h1>
+      <p class="tagline" data-aos="fade-up" data-aos-delay="200">
+        Comprehensive automation solutions for modern manufacturing excellence
+      </p>
+    </div>
+  </div>
+  <div class="header-wave">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Solutions Overview -->
+<section class="solutions-overview">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">WHAT WE OFFER</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">Transforming Industries with <span class="gradient-text">Smart Solutions</span></h2>
+      <p class="section-subtitle">Tailored technology solutions that drive efficiency, quality, and growth</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solutions Section -->
+<section class="solutions-section">
+  <div class="container">
+    <div class="solution-detail" *ngFor="let solution of solutions; let i = index">
+      <div class="solution-wrapper" 
+           [class.reverse]="i % 2 !== 0"
+           data-aos="fade-up"
+           [attr.data-aos-delay]="100">
+        
+        <!-- Solution Content -->
+        <div class="solution-content">
+          <div class="solution-number">{{ (i + 1).toString().padStart(2, '0') }}</div>
+          
+          <div class="solution-icon-wrapper">
+            <div class="icon-circle">
+              <span class="icon-emoji">{{ solution.emoji }}</span>
+            </div>
+          </div>
+          
+          <h2 class="solution-title">{{ solution.title }}</h2>
+          <p class="solution-description">{{ solution.description }}</p>
+          
+          <div class="solution-details-grid">
+            <div class="detail-column">
+              <h4>
+                <span class="detail-icon">⚡</span>
+                Key Features
+              </h4>
+              <ul class="feature-list">
+                <li *ngFor="let feature of solution.features">
+                  <span class="checkmark">✓</span>
+                  <span>{{ feature }}</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="detail-column">
+              <h4>
+                <span class="detail-icon">🎯</span>
+                Benefits
+              </h4>
+              <ul class="benefit-list">
+                <li *ngFor="let benefit of solution.benefits">
+                  <span class="checkmark">✓</span>
+                  <span>{{ benefit }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="solution-tags">
+            <span class="tag" *ngFor="let tag of solution.tags">{{ tag }}</span>
+          </div>
+          
+          <div class="solution-actions">
+            <a routerLink="/contact" class="btn btn-primary">
+              <span>Request Demo</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <button class="btn btn-secondary" (click)="learnMore(solution)">
+              <span>Learn More</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Solution Image -->
+        <div class="solution-visual">
+          <div class="visual-container">
+            <div class="visual-glow"></div>
+            <img [src]="solution.image" [alt]="solution.title">
+            <div class="visual-overlay">
+              <div class="overlay-stats">
+                <div class="stat-item">
+                  <span class="stat-value">{{ solution.stat1Value }}</span>
+                  <span class="stat-label">{{ solution.stat1Label }}</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">{{ solution.stat2Value }}</span>
+                  <span class="stat-label">{{ solution.stat2Label }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Floating Badge -->
+          <div class="floating-badge">
+            <span class="badge-icon">✨</span>
+            <span>Industry Leading</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Our Solutions -->
+<section class="why-choose">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-label centered">
+        <span class="label-line"></span>
+        <span class="label-text">THE DIFFERENCE</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="section-title centered">Why Choose <span class="gradient-text">Our Solutions?</span></h2>
+    </div>
+    
+    <div class="why-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h4>Proven Track Record</h4>
+        <p>50+ successful implementations across diverse industries</p>
+      </div>
+      
+      <div class="why-card">
+        <div class="why-icon">🔧</div>
+        <h4>Custom Solutions</h4>
+        <p>Tailored to your specific operational requirements</p>
+      </div>
+      
+      <div class="why-card">
+        <div class="why-icon">🚀</div>
+        <h4>Fast Deployment</h4>
+        <p>Quick implementation with minimal disruption</p>
+      </div>
+      
+      <div class="why-card">
+        <div class="why-icon">💡</div>
+        <h4>Latest Technology</h4>
+        <p>Cutting-edge AI and IoT integration</p>
+      </div>
+      
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <h4>Reliable Support</h4>
+        <p>24/7 technical support and maintenance</p>
+      </div>
+      
+      <div class="why-card">
+        <div class="why-icon">📊</div>
+        <h4>ROI Focused</h4>
+        <p>Measurable results and continuous improvement</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Partners (Optional) -->
+<section class="integration-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title centered">Seamless <span class="gradient-text">Integration</span></h2>
+      <p class="section-subtitle">Our solutions integrate with leading industry platforms</p>
+    </div>
+    
+    <div class="integration-logos" data-aos="fade-up" data-aos-delay="200">
+      <div class="integration-item">
+        <span class="integration-text">SAP</span>
+      </div>
+      <div class="integration-item">
+        <span class="integration-text">Oracle</span>
+      </div>
+      <div class="integration-item">
+        <span class="integration-text">Siemens</span>
+      </div>
+      <div class="integration-item">
+        <span class="integration-text">Rockwell</span>
+      </div>
+      <div class="integration-item">
+        <span class="integration-text">ABB</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enhanced CTA Section -->
+<section class="cta-section">
+  <div class="cta-background"></div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in">
+      <div class="cta-badge">
+        <span class="pulse-dot"></span>
+        <span>Ready to Transform?</span>
+      </div>
+      <h2>Let's Implement These Solutions for Your Business</h2>
+      <p>Schedule a consultation with our experts to discuss how we can tailor these solutions to your specific needs</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-primary btn-large">
+          <span>Schedule Consultation</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a routerLink="/projects" class="btn btn-secondary btn-large">
+          <span>View Case Studies</span>
+        </a>
+      </div>
+      
+      <div class="cta-features">
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>Free Consultation</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>Custom Proposal</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-icon">✓</span>
+          <span>ROI Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

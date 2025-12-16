@@ -1,0 +1,268 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down">
+        <span class="badge-icon">⚡</span>
+        <span>Industry 4.0 Leaders</span>
+      </div>
+      <h1 data-aos="fade-up">
+        Engineering Tomorrow Through 
+        <span class="text-gradient">Vision, Intelligence & Precision</span>
+      </h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Delivering cutting-edge <strong>Machine Vision</strong>, <strong>RF & Microwave Engineering</strong>, 
+        and <strong>Special Purpose Machines</strong> to global leaders in Automobile and Medical Device manufacturing.
+      </p>
+      <div class="hero-features" data-aos="fade-up" data-aos-delay="150">
+        <div class="feature-pill">✓ ISO Certified</div>
+        <div class="feature-pill">✓ 50+ Projects</div>
+        <div class="feature-pill">✓ 10+ Clients</div>
+        <div class="feature-pill">✓ 24/7 Support</div>
+      </div>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+        <a routerLink="/solutions" class="btn btn-primary btn-large">
+          <span>Explore Solutions</span>
+          <span class="btn-icon">→</span>
+        </a>
+        <a routerLink="/contact" class="btn btn-outline btn-large">
+          <span>Schedule Demo</span>
+          <span class="btn-icon">📞</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
+      <div class="visual-container">
+        <div class="floating-card card-1">
+          <div class="card-icon">🔍</div>
+          <div class="card-text">Machine Vision</div>
+          <div class="card-metric">99.9% Accuracy</div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="card-icon">📡</div>
+          <div class="card-text">RF & Microwave</div>
+          <div class="card-metric">GHz Precision</div>
+        </div>
+        <div class="floating-card card-3">
+          <div class="card-icon">⚙️</div>
+          <div class="card-text">SPM Systems</div>
+          <div class="card-metric">Custom Built</div>
+        </div>
+        <div class="floating-card card-4">
+          <div class="card-icon">🤖</div>
+          <div class="card-text">Automation</div>
+          <div class="card-metric">Full Stack</div>
+        </div>
+        <div class="center-graphic">
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring delay-1"></div>
+          <div class="pulse-ring delay-2"></div>
+          <div class="graphic-core">AN</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-content" data-aos="fade-up">
+      <p class="trust-text">Trusted by leading companies in</p>
+      <div class="trust-industries">
+        <span>🚗 Automotive</span>
+        <span>💊 Medical Devices</span>
+        <span>✈️ Aerospace</span>
+        <span>💻 Electronics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-aos="zoom-in">
+        <div class="stat-icon">📅</div>
+        <div class="stat-number">{{ currentYears }}+</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-number">{{ currentProjects }}+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-icon">🤝</div>
+        <div class="stat-number">{{ currentClients }}+</div>
+        <div class="stat-label">Enterprise Clients</div>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+        <div class="stat-icon">🏭</div>
+        <div class="stat-number">{{ currentIndustries }}+</div>
+        <div class="stat-label">Industry Verticals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solutions Section -->
+<section class="solutions">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">What We Offer</div>
+      <h2>Advanced Engineering Solutions</h2>
+      <p class="section-description">
+        Comprehensive automation and vision systems engineered for precision, reliability, and performance
+      </p>
+    </div>
+    
+    <div class="solutions-grid">
+      <div class="solution-card" *ngFor="let solution of solutions; let i = index" 
+           data-aos="fade-up" 
+           [attr.data-aos-delay]="i * 100">
+        <div class="solution-header">
+          <div class="solution-icon">{{ solution.icon }}</div>
+          <div class="solution-badge">Core Solution</div>
+        </div>
+        <h3>{{ solution.title }}</h3>
+        <p>{{ solution.description }}</p>
+        <a routerLink="/solutions" class="solution-link">
+          <span>Explore Details</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Industries Section -->
+<section class="industries">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">Industry Expertise</div>
+      <h2>Sectors We Empower</h2>
+      <p class="section-description">
+        Specialized solutions tailored for high-precision manufacturing environments
+      </p>
+    </div>
+    
+    <div class="industries-grid">
+      <div class="industry-card" *ngFor="let industry of industries; let i = index"
+           data-aos="flip-left"
+           [attr.data-aos-delay]="i * 80">
+        <div class="industry-icon-wrapper">
+          <div class="industry-icon">{{ industry.icon }}</div>
+        </div>
+        <h4>{{ industry.name }}</h4>
+        <div class="industry-overlay">
+          <p>Specialized Solutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us bg-gray">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">Why AN NextGen</div>
+      <h2>Engineering Excellence, Delivered</h2>
+    </div>
+    
+    <div class="why-grid">
+      <div class="why-card" data-aos="fade-right">
+        <div class="why-number">01</div>
+        <h3>Technical Expertise</h3>
+        <p>Deep domain knowledge in vision systems, RF engineering, and precision automation with proven track record</p>
+      </div>
+      <div class="why-card" data-aos="fade-right" data-aos-delay="100">
+        <div class="why-number">02</div>
+        <h3>Custom Solutions</h3>
+        <p>Tailored SPM development and integration designed specifically for your manufacturing requirements</p>
+      </div>
+      <div class="why-card" data-aos="fade-right" data-aos-delay="200">
+        <div class="why-number">03</div>
+        <h3>Industry Partnerships</h3>
+        <p>Trusted by automotive OEMs and medical device manufacturers across multiple continents</p>
+      </div>
+      <div class="why-card" data-aos="fade-right" data-aos-delay="300">
+        <div class="why-number">04</div>
+        <h3>24/7 Support</h3>
+        <p>Comprehensive after-sales service, training, and technical support for uninterrupted operations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clients Section -->
+<section class="clients-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">Client Portfolio</div>
+      <h2>Trusted by Industry Leaders</h2>
+      <p class="section-description">
+        Proven partnerships with leading automotive and medical device manufacturers
+      </p>
+    </div>
+    
+    <div class="clients-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="client-card" *ngFor="let client of clients">
+  <div class="client-logo-wrapper">
+    <div class="logo-circle">
+      <img *ngIf="client.logoPath" 
+           [src]="client.logoPath" 
+           [alt]="client.name"
+           class="client-logo-img">
+      <span *ngIf="!client.logoPath" class="client-logo-emoji">{{ client.logo }}</span>
+    </div>
+  </div>
+  <p class="client-name">{{ client.name }}</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-background">
+    <div class="cta-pattern"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content" data-aos="zoom-in">
+      <div class="cta-badge">Get Started Today</div>
+      <h2>Ready to Transform Your Manufacturing?</h2>
+      <p>Let's discuss how our precision engineering solutions can optimize your production line and enhance quality control</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-white btn-large">
+          <span>Schedule Consultation</span>
+          <span class="btn-icon">📅</span>
+        </a>
+        <a routerLink="/solutions" class="btn btn-outline-white btn-large">
+          <span>View Solutions</span>
+        </a>
+      </div>
+      <div class="cta-features">
+        <div class="cta-feature">
+          <span class="feature-check">✓</span>
+          <span>Free Technical Assessment</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-check">✓</span>
+          <span>Custom Solution Design</span>
+        </div>
+        <div class="cta-feature">
+          <span class="feature-check">✓</span>
+          <span>ROI Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
